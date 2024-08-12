@@ -1,10 +1,13 @@
 import React from 'react';
+import './CityCard';
 
-const CityCard = ({ city }) => {
+function CityCard({ city }) {
+  if (!city) return null;
+
   return (
     <div className="city-card">
       <h2>{city.name}</h2>
-      <img src={city.imageUrl} alt={`Изображение города ${city.name}`} />
+      <img src={city.imageUrl} alt={city.name} />
       <p>{city.description}</p>
       <ul>
         {city.facts.map((fact, index) => (
@@ -13,7 +16,8 @@ const CityCard = ({ city }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default CityCard;
+
 

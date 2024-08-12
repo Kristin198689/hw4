@@ -1,80 +1,71 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #00ff00;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.App {
   padding: 20px;
 }
 
-.city-selector {
-  margin-bottom: 20px;
-  text-align: center;
+select {
+  padding: 25px;
+  margin: 20px 0;
+  align-items: center;
 }
 
 .city-card {
-  border: 1px solid #ccc;
-  padding: 20px;
+  border: 2px solid #006400;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #ffffff;
+  display: inline-block;
+  text-align: left;
   max-width: 400px;
-  margin: 20px auto;
-  text-align: center;
-  background-color: #fff;
 }
 
 .city-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
 .city-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.city-card p {
-  font-size: 16px;
-  margin-bottom: 15px;
+  color: #006400;
 }
 
 .city-card ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
-.city-card li {
-  font-size: 14px;
-  margin-bottom: 5px;
+.city-card ul li {
+  margin: 10px 0;
 }
 
-/* Медиазапросы */
-@media (max-width: 600px) {
+/* Медиа-запросы для адаптивности */
+
+@media (max-width: 768px) {
   .city-card {
-    padding: 10px;
     max-width: 90%;
   }
-
-  .city-card h2 {
-    font-size: 20px;
-  }
-
-  .city-card p, .city-card li {
-    font-size: 14px;
-  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .city-card {
-    padding: 5px;
+    max-width: 100%;
+    padding: 10px;
   }
 
-  .city-card h2 {
-    font-size: 18px;
-  }
-
-  .city-card p, .city-card li {
-    font-size: 12px;
+  select {
+    width: 100%;
   }
 }
+
+
 
